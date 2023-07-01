@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth !important;
+}
+body        /*remove after removing advertisement   */
+{
+  background: var(--primary-bg);
+}
+.light-theme {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f5f5f5;
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 255, 255);
+  --blog-bg: #2962ff;
+  --discord-bg:#5865f2; 
+}
+.dark-theme {
+  --primary-bg: #1E0738;
+  --secondary-bg: #310C5B;
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(0, 0, 0);
+  --blog-bg: #2962ff;
+  --discord-bg:#5865f2; 
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.components-outer-container{
+  max-width: 1500px;
+  margin: auto;
+  /* background: red; */
+}
+
+.cm-gradient {
+  background: linear-gradient(90deg, #5848ea 0%, #9549eb 100%);
+}
+
+.cm-gradient-text {
+  background: -webkit-linear-gradient(90deg, #5848ea 0%, #9549eb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: var(--primary-bg);
+}
+
+.header-image {
+  animation: wave 3s infinite;
+}
+
+@keyframes wave {
+  20%,
+  to {
+    transform: translate3d(0);
+  }
+  40% {
+    transform: translateY(-25px);
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+.cm-gradient-button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background: -webkit-linear-gradient(0deg, #5848ea 0%, #9549eb 100%);
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}

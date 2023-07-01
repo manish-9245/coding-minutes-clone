@@ -1,0 +1,211 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 80px;
+  background: var(--primary-bg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.nav-container .first {
+  display: flex;
+  align-items: center;
+  /* background: red; */
+  width: 230px;
+}
+.nav-container .first img {
+  width: 100%;
+}
+.nav-container .second ul {
+  display: flex;
+  align-items: center;
+  /* background: red; */
+  /* width: 230px; */
+  justify-content: space-between;
+}
+.nav-container .second ul li {
+  padding: 2px 12px;
+}
+.nav-container .second ul li a {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.nav-container .second ul li a:hover {
+  background: -webkit-linear-gradient(0deg, #5848ea 0%, #9549eb 100%);
+  color: var(--secondary-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-container .third {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-container .signup-button {
+  color: white;
+}
+.nav-container .third .menu-btn {
+    display: none;
+  }
+  .nav-container .mobile-nav {
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+/* media query (small laptop devices) */
+@media screen and (max-width: 1150px) {
+  .nav-container .first {
+    width: 190px;
+  }
+  .nav-container .second ul li {
+    padding: 2px 8px;
+  }
+  .nav-container .third {
+    gap: 0.5rem;
+  }
+  .nav-container .third button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+}
+
+/* media query (medium devices)  */
+@media only screen and (max-width: 1000px) {
+  .nav-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .nav-container .first {
+    /* display: none; */
+
+    width: 190px;
+  }
+  .nav-container .second ul {
+    display: none;
+  }
+  .nav-container .third .cm-gradient-button{
+    display: none;
+  }
+  .nav-container .third {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .nav-container .third .menu-btn {
+    display: block;
+    font-size: 1.9rem;
+    position: relative;
+    top: 4px;
+    color: var(--primary-color)
+  }
+  .nav-container .mobile-nav {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-bg);
+    height: 100vh;
+    display: flex;
+  }
+  .nav-container .mobile-nav img {
+    width: 210px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  .nav-container .mobile-nav .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2rem;
+  }
+  .nav-container .mobile-nav ul {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+  }
+  .nav-container .mobile-nav ul li {
+    padding: 1rem 0;
+  }
+  .nav-container .mobile-nav ul li a {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .nav-container .mobile-nav ul li a:hover {
+    background: -webkit-linear-gradient(0deg, #5848ea 0%, #9549eb 100%);
+    color: var(--secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-container .mobile-nav .cm-gradient-button {
+    position: absolute;
+    bottom: 80px;
+    left: 30px;
+    font-size: 1rem;
+  }
+
+}
+
+/* theme css */
+.nav-container .checkbox {
+  opacity: 0;
+  position: absolute;
+  width: 50px;
+}
+.nav-container label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+  height: 25px;
+  background: linear-gradient(
+    97.38deg,
+    rgba(89, 72, 234, 0.99) 5.73%,
+    rgba(147, 73, 235, 0.99) 94.27%
+  );
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-container label .first {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+  font-size: 1rem;
+}
+.nav-container label .second {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+  font-size: 1rem;
+
+}
+.nav-container label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  /* top: 2px; */
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transition: transform 0.2s linear;
+}
+label .ball-left {
+  transform: translateX(0px);
+}
+label .ball-right {
+  transform: translateX(24px);
+}

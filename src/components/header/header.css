@@ -1,0 +1,112 @@
+.normal-outer-container {
+  background: var(--primary-bg);
+  z-index: -2;
+} 
+/* temporary class */
+.newly-launched {     
+  width: fit-content;
+  font-size: 0.90rem;
+  font-weight: 600;
+  padding: 0.15rem 0.7rem;
+  border-radius: 8px;
+  border: 2px solid #ffcd3e;
+  color: #ffcd3e;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  min-height: 100vh;
+  margin: 4vh 40px 0 40px;
+  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); */
+  color: var(--primary-color);
+  /* margin-top: 120px; remove after removing advertisement */
+}
+.header-container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.header-container .left .first {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.header-container .left .second {
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 600px;
+}
+.header-container .third button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 200px;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.header-container .third button:hover {
+  transform: scale(1.05);
+}
+.header-container .third button a {
+  color: white;
+}
+
+.header-container .right .header-image {
+  max-width: 500px;
+}
+
+/* media query (small laptop devices and medium devices) */
+@media screen and (max-width: 1200px) {
+  .newly-launched {
+    margin: 20vh auto auto auto;
+  }
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 180px;
+    margin: 0px 20px 0 20px;
+    /* margin-top: 100px; remove after removing advertisement */
+  }
+  .header-container .left {
+    text-align: center;
+  }
+  .header-container .left .first {
+    font-size: 1.2rem;
+  }
+  .header-container .left .second {
+    font-size: 1.1rem;
+    /* max-width: 400px; */
+    
+  }
+  .header-container .third button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  .header-container .right {
+    margin-top: 50px;
+  }
+}
+/* media query (small devices) */
+@media screen and (max-width: 600px) {
+.header-container {
+    margin-top: 75px;
+    padding-top: 0;
+   margin-top: 100px;  /* remove after removing advertisement */
+}
+
+    .header-container .left .first {
+    font-size: 1.1rem;
+  }
+  .header-container .third button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .header-container .right .header-image {
+    max-width: 400px;
+  }
+}

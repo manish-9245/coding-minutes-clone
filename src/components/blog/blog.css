@@ -1,0 +1,121 @@
+.blogs-outer-container {
+    width: 100vw;
+    background: var(--primary-bg);
+    position: relative;
+    /* top: -20px; */
+    /* z-index: -1; */
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.blogs-container {
+    background: var(--blog-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 1.8rem;
+    max-height: 450px;
+    transition: all 0.3s linear;
+    height: calc(fit-content + 2rem) !important;
+    color: var(--primary-color);
+}
+.blogs-container .left {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 2rem;
+    width: 60%;
+    margin-left: 40px;
+}
+.blogs-container .left h1 {
+    font-size: 2.5rem;
+    color: white;
+    /* text-align: center; */
+    margin-bottom: 1rem;
+}
+.blogs-container .left p {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.blogs-container .left button {
+    padding: 1rem 3rem;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: rgb(0, 0, 0,0.25);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    width: max-content;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.blogs-container .left button:hover {
+    background: rgb(0, 0, 0, 0.32);;
+    /* color: var(--primary-bg); */
+    transform: scale(1.05);
+}
+
+.blogs-container .left button a {
+    color: white
+}
+
+.blogs-container .right {
+    width: 40%;
+}
+
+.blogs-container .right img {
+    opacity: 0.35;
+    object-fit: contain;
+}
+
+/* media query (small laptop devices) */
+@media screen and (max-width:1200px) {
+    .blogs-container {
+        max-width: 800px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .blogs-container .left {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .blogs-container .left h1 {
+        font-size: 2rem;
+    }
+    .blogs-container .left p {
+        font-size: 1.1rem;
+    }
+    .blogs-container .left button {
+        font-size: 1.2rem;
+        padding: 0.8rem 2.5rem;
+        margin: auto;
+        margin-top: 2rem;
+    }
+    .blogs-container .right {
+        display: none;
+    }
+
+    
+}
+
+/* media query (small devices) */
+@media screen and (max-width:600px) {
+    .blogs-container .left h1 {
+        font-size: 1.8rem;
+    }
+    .blogs-container .left p {
+        font-size: 1rem;
+    }
+    .blogs-container .left button {
+        padding: 0.7rem 1.5rem;
+        font-size: 1.1rem;
+    }
+}
